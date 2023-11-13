@@ -4,7 +4,7 @@ node {
     git credentialsId: 'github cred', url: 'https://github.com/lnxdevsecops/maven-web-application.git'
   }
   stage("BuildPackage"){
-    sh "${mavenHOme}/bin/mvn clean package"
+    sh "${mavenHome}/bin/mvn clean package"
   }
   stage("GenerateSonarQubeReport"){
     sh "${mavenHome}/bin/mvn sonar:sonar"
