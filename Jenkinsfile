@@ -1,4 +1,4 @@
-node {
+node("node-1") {
   def mavenHome= tool name: "maven3.8.5"
   stage("CheckOutCode"){
     git credentialsId: 'github cred', url: 'https://github.com/lnxdevsecops/maven-web-application.git'
